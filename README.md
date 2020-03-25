@@ -37,6 +37,6 @@ $ ogr2ogr -f "PostgreSQL" pg:"host=localhost dbname='coronafriend' [connection o
 
 ```
 $ psql -U <username> coronafriend -c 'CREATE INDEX roadlink_roadnametoid_idx ON roadlink(roadnametoid);'
-$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcd_idx ON postcodes(pcd);'
-$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcdpartial_idx ON postcodes(pcd varchar_pattern_ops);'
+$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcd2_idx ON postcodes(pcd2);'
+$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcd2partial_idx ON postcodes(pcd2 varchar_pattern_ops);'
 ```
