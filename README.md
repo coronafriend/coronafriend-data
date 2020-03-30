@@ -1,4 +1,4 @@
-# coronafriend-data
+# <img valign="top" src="https://github.com/coronafriend/coronafriend-assets/raw/master/site-icons/coronafriend-icon.png" width="64" heigh="64" alt="CoronaFriend">&nbsp;coronafriend-data
 
 Data loading support for CoronaFriend. In time this will be fully scriptable, but for now this is an
 aide memoire for the manual commands to get PostgreSQL/PostGIS populated and indexed.
@@ -37,6 +37,6 @@ $ ogr2ogr -f "PostgreSQL" pg:"host=localhost dbname='coronafriend' [connection o
 
 ```
 $ psql -U <username> coronafriend -c 'CREATE INDEX roadlink_roadnametoid_idx ON roadlink(roadnametoid);'
-$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcd2_idx ON postcodes(pcd2);'
-$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcd2partial_idx ON postcodes(pcd2 varchar_pattern_ops);'
+$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcds_idx ON postcodes(pcds);'
+$ psql -U <username> coronafriend -c 'CREATE INDEX postcodes_pcdspartial_idx ON postcodes(pcds varchar_pattern_ops);'
 ```
